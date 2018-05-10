@@ -43,7 +43,7 @@ public class SignUpActivity extends AppCompatActivity implements SignUpContract.
     private void setupView() {
 
 //    Estandar en nomber de variable. camelCase igual que en la vista. HUMO
-        btSignUp = findViewById(R.id.bt_login);
+        btSignUp = findViewById(R.id.bt_sign_up);
         cbTerms = findViewById(R.id.cb_terms);
         tilUsername = findViewById(R.id.til_username);
         tilPassword = findViewById(R.id.til_password);
@@ -90,7 +90,7 @@ public class SignUpActivity extends AppCompatActivity implements SignUpContract.
                 .setTitle("Exito")
                 .setMessage("El usuario ha sido creado exitosamente")
                 .setPositiveButton("OK", (dialog, which) -> {
-//        Cerrar la actividad actual
+//                    Cerrar la actividad actual
                     finish();
                 })
                 .create().show();

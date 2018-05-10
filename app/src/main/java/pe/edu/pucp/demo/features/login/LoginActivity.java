@@ -2,6 +2,7 @@ package pe.edu.pucp.demo.features.login;
 
 import android.os.Bundle;
 import android.support.design.widget.TextInputLayout;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -73,9 +74,12 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.Vi
 
     @Override
     public void onLoginError(String message) {
-//        Muestras un mensajito o algo. Modo asno... TOAST.
-//        Ya si quieres le pones un dialog
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+
+//        Ta feo luego lo cambias
+        new AlertDialog.Builder(this)
+                .setTitle("Error")
+                .setMessage(message)
+                .create().show();
     }
 
     @Override
